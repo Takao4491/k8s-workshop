@@ -1,0 +1,28 @@
+﻿apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: s4-nginx
+  namespace: workshop
+  labels:
+    app: s4-nginx
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: s4-nginx
+  template:
+    metadata:
+      labels:
+        app: s4-nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.25-alpine
+        ports:
+        - containerPort: 80
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 5
