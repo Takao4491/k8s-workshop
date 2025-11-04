@@ -33,3 +33,48 @@ kubectl get pods -n ingress-nginx -o wide
 - s4-nginx-deployment.yaml
 - s4-nginx-service.yaml
 - s4-ingress.yaml
+
+### Commandes de lancement et test
+
+#### 📦 Appliquer les fichiers YAML
+
+```bash
+kubectl apply -f s4-nginx-deployment.yaml
+kubectl apply -f s4-nginx-service.yaml
+kubectl apply -f s4-ingress.yaml
+```
+
+#### 🔍 Vérifier les ressources déployées
+
+```bash
+kubectl get pods -n workshop
+kubectl get svc -n workshop
+kubectl get endpoints -n workshop
+kubectl get ingress -n workshop
+```
+
+#### 🌐 Tester l’accès via port-forward
+
+```bash
+kubectl -n ingress-nginx port-forward svc/ingress-nginx-controller 8080:80
+```
+
+#### 🧪 Tester l’application dans le navigateur ou avec curl
+
+```bash
+curl -H "Host: s4.local" http://localhost:8080
+```
+
+### Diagramme de fonctionnement
+
+```
+Navigateur (http://s4.local:8080)
+            |
+         [Ingress]
+            |
+         [Service]
+            |
+     +-------------+
+     |             |
+ [Pod Nginx]   [Pod Nginx]
+```
