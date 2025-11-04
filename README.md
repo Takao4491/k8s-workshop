@@ -11,14 +11,15 @@ Ce projet déploie une application Nginx dans Kubernetes avec un service interne
 
 ### Commandes utilisées et sorties :
 
-\\\Bash
+```bash
 kubectl get pods -n workshop -o wide
 kubectl get svc -n workshop
 kubectl get endpoints -n workshop
 kubectl get ingress -n workshop
 kubectl describe ingress s4-ingress -n workshop
 kubectl get pods -n ingress-nginx -o wide
-\\\
+```
+
 
 ### Résultat :
 - Les pods s4-nginx sont en Running
