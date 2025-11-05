@@ -1,0 +1,8 @@
+```bash
+kubectl exec -it postgres-0 -n workshop-s5 -- psql -U postgres -d workshop
+```
+
+```sql
+psql (15.14 (Debian 15.14-1.pgdg13+1))
+Type "help" for help.
+```

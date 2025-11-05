@@ -1,0 +1,17 @@
+```bash
+kubectl delete pod postgres-0 -n workshop-s5
+kubectl get pods -n workshop-s5 -w
+```
+
+```sql
+SELECT * FROM test_table;
+```
+
+```text
+INSERT 0 1
+ id | name
+----+-------
+  1 | Lucas
+  2 | Lucas
+(2 rows)
+```

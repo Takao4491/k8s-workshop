@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: postgres-config
+  namespace: workshop-s5
+data:
+  POSTGRES_DB: workshop
+  POSTGRES_USER: postgres
