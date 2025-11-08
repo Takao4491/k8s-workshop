@@ -1,0 +1,45 @@
+{
+  "dashboard": {
+    "id": null,
+    "title": "API Monitoring",
+    "timezone": "browser",
+    "panels": [
+      {
+        "type": "graph",
+        "title": "Latence moyenne (s)",
+        "targets": [
+          {
+            "expr": "rate(http_request_duration_seconds_sum[1m]) / rate(http_request_duration_seconds_count[1m])",
+            "legendFormat": "latence moyenne"
+          }
+        ],
+        "gridPos": { "x": 0, "y": 0, "w": 12, "h": 8 }
+      },
+      {
+        "type": "stat",
+        "title": "Taux d’erreur (%)",
+        "targets": [
+          {
+            "expr": "http_requests_errors_total / http_requests_total * 100",
+            "legendFormat": "erreurs"
+          }
+        ],
+        "gridPos": { "x": 12, "y": 0, "w": 12, "h": 8 }
+      },
+      {
+        "type": "barchart",
+        "title": "Requêtes par endpoint",
+        "targets": [
+          {
+            "expr": "http_requests_total",
+            "legendFormat": "{{endpoint}}"
+          }
+        ],
+        "gridPos": { "x": 0, "y": 8, "w": 24, "h": 8 }
+      }
+    ],
+    "schemaVersion": 36,
+    "version": 1,
+    "refresh": "10s"
+  }
+}

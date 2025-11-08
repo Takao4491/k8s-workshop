@@ -1,0 +1,20 @@
+groups:
+  - name: api-alerts
+    rules:
+      - alert: HighLatency
+        expr: http_request_duration_seconds_average > 0.5
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Latence élevée sur l'API"
+          description: "La latence moyenne dépasse 0.5s depuis plus d'une minute."
+
+      - alert: HighErrorRate
+        expr: http_requests_errors_total / http_requests_total > 0.05
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Taux d'erreur élevé sur l'API"
+          description: "Plus de 5% des requêtes échouent depuis 2 minutes."
