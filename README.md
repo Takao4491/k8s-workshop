@@ -21,27 +21,49 @@ Le DSI souhaite amorcer une modernisation via Docker, Kubernetes et CI/CD, en co
 Arborescence du projet
 ----------------------
 tp-final
+
 ├── app
+
 │   ├── api
+
 │   │   ├── app.py
+
 │   │   └── Dockerfile
+
 │   └── front
+
 │       ├── Dockerfile
+
 │       └── index.html
+
 ├── docker
+
 │   └── docker-compose.yml
+
 ├── docs
+
 │   ├── architecture.md
+
 │   ├── decisions.md
+
 │   └── exploitation.md
+
 ├── k8s
+
 │   ├── api-deployment.yaml
+
 │   ├── api-service.yaml
+
 │   ├── configmap.yaml
+
 │   ├── front-deployment.yaml
+
 │   ├── front-service.yaml
+
 │   └── secret.yaml
+
 └── README.md
+
 
 Instructions de lancement
 -------------------------
@@ -83,10 +105,17 @@ https://github.com/Takao4491/k8s-workshop/tree/feature/final
 
 État du projet
 --------------
+
 ✅ Structure du projet en place
+
 ✅ API Flask minimale opérationnelle
+
 ✅ Frontend statique avec NGINX
+
 ✅ Intégration Docker Compose
+
 ✅ Manifests Kubernetes prêts
+
 ✅ Documentation technique complète
+
 ✅ Présentation client intégrée
