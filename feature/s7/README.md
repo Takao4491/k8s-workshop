@@ -15,18 +15,31 @@ La supervision et la configuration des dashboards ont été réalisées directem
 ## Structure du projet
 
 feature/s7/
+
 ├── api/
+
 │   ├── app.py
+
 │   └── Dockerfile
+
 ├── docker-compose.yml
+
 ├── prometheus/
+
 │   ├── prometheus.yml
+
 │   └── alerts.yml
+
 ├── grafana/
+
 │   └── dashboard.json
+
 ├── fiches/
+
 │   ├── alerte-latence.md
+
 │   └── alerte-erreurs.md
+
 └── README.md
 
 ## Fonctionnement
