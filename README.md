@@ -24,43 +24,43 @@ tp-final
 
 ├── app
 
-│   ├── api
+│   	├── api
 
-│   │   ├── app.py
+│   	│   	├── app.py
 
-│   │   └── Dockerfile
+│   	│   	└── Dockerfile
 
-│   └── front
+│   	└── front
 
-│       ├── Dockerfile
+│       	├── Dockerfile
 
-│       └── index.html
+│       	└── index.html
 
 ├── docker
 
-│   └── docker-compose.yml
+│   	└── docker-compose.yml
 
 ├── docs
 
-│   ├── architecture.md
+│   	├── architecture.md
 
-│   ├── decisions.md
+│   	├── decisions.md
 
-│   └── exploitation.md
+│   	└── exploitation.md
 
 ├── k8s
 
-│   ├── api-deployment.yaml
+│   	├── api-deployment.yaml
 
-│   ├── api-service.yaml
+│   	├── api-service.yaml
 
-│   ├── configmap.yaml
+│   	├── configmap.yaml
 
-│   ├── front-deployment.yaml
+│   	├── front-deployment.yaml
 
-│   ├── front-service.yaml
+│   	├── front-service.yaml
 
-│   └── secret.yaml
+│   	└── secret.yaml
 
 └── README.md
 
