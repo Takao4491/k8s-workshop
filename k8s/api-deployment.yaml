@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-deployment
+  labels:
+    app: mce-utility
+    tier: api
+spec:
+  replicas: 1  # Configuration de base pour le POC
+  selector:
+    matchLabels:
+      app: mce-utility
+      tier: api
+  template:
+    metadata:
+      labels:
+        app: mce-utility
+        tier: api
+    spec:
+      containers:
+      - name: mce-api
+        # IMPORTANT: Remplacez par le chemin de votre image sur un registry public
+        image: your_docker_user/mce-utility:latest 
+        ports:
+        - containerPort: 5000
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "250m"
+        # Sondes de santé Kubernetes basées sur l'endpoint /health
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 5000
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 5000
+          initialDelaySeconds: 15
+          periodSeconds: 20
