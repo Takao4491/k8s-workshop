@@ -16,29 +16,19 @@ Mettre en œuvre une architecture conteneurisée et orchestrée par Kubernetes p
 | **Outils** | `docker-compose` | Environnement de développement et de test local. | 
 
 ## 📁 Structure du Projet
-
+```
 ├── app/
-
 │     ├── api.py # Microservice Flask 
-
 │     └── Dockerfile # Configuration du conteneur API 
-
 ├── docs/ 
-
 │     ├── architecture.md # Vue d'ensemble de l'architecture 
-
 │     └── exploitation.md # Guide de lancement et commandes 
-
 ├── k8s/ 
-
 │     ├── api-deployment.yaml # Déploiement K8s (Pods) 
-
 │     └── api-service.yaml # Exposition réseau K8s (Service) 
-
 ├── .gitignore 
-
 └── README.md
-
+```
 
 ## 🚀 Lancement Rapide (Local)
 
