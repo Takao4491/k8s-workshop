@@ -11,11 +11,17 @@ des données après redémarrage du pod.
 Structure du dossier
 --------------------
 manifests/
+
 ├── configmap.yaml
+
 ├── postgres-pvc.yaml
+
 ├── postgres-service.yaml
+
 ├── postgres-statefulset.yaml
+
 ├── secret.yaml              # Ignoré par Git (.gitignore)
+
 └── secret-example.yaml      # Modèle public
 
 Déploiement
